@@ -19,14 +19,14 @@ class TicTacToe {
   }
 
   check() {
-    if(this.board.squares[0].value === this.board.squares[1].value && this.board.squares[1].value === this.board.squares[2].value) ||
+    if ((this.board.squares[0].value === this.board.squares[1].value && this.board.squares[1].value === this.board.squares[2].value) ||
       (this.board.squares[3].value === this.board.squares[4].value && this.board.squares[4].value === this.board.squares[5].value) ||
       (this.board.squares[6].value === this.board.squares[7].value && this.board.squares[7].value === this.board.squares[8].value) ||
       (this.board.squares[0].value === this.board.squares[3].value && this.board.squares[3].value === this.board.squares[6].value) ||
       (this.board.squares[1].value === this.board.squares[4].value && this.board.squares[4].value === this.board.squares[7].value) ||
       (this.board.squares[2].value === this.board.squares[5].value && this.board.squares[5].value === this.board.squares[8].value) ||
       (this.board.squares[0].value === this.board.squares[4].value && this.board.squares[4].value === this.board.squares[8].value) ||
-      (this.board.squares[2].value === this.board.squares[4].value && this.board.squares[4].value === this.board.squares[6].value) {
+      (this.board.squares[2].value === this.board.squares[4].value && this.board.squares[4].value === this.board.squares[6].value)) {
         console.log(`Player ${this.turn} has won!`);
     } else {
       this.board.draw();
@@ -50,7 +50,5 @@ class Board {
 }
 
 const Square = function(i) {
-  constructor(i) {
-    this.value = i;
-  }
+  this.value = i;
 }
